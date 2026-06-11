@@ -1,0 +1,21 @@
+<label>
+  {{ label() }} :
+
+  <select [formField]="field()">
+    <option value="">Select</option>
+
+    @for (option of options(); track option.value) {
+      <option [value]="option.value">
+        {{ option.label }}
+      </option>
+    }
+  </select>
+</label>
+
+@if (field()().touched()) {
+  <ul class="error-list">
+    @for (error of field()().errors(); track error.message) {
+      <li>{{ error.message }}</li>
+    }
+  </ul>
+}

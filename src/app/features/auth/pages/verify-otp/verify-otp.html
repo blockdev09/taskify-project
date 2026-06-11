@@ -1,0 +1,57 @@
+<div class="verify-otp-container">
+
+  <app-landing-header></app-landing-header>
+
+  <div class="verify-otp-section">
+
+    <div class="verify-otp-card">
+
+      <h2>Verify OTP</h2>
+
+      <p>
+        OTP sent to ****war@coditas.com
+      </p>
+
+      <p class="timer">
+        OTP expires in {{ timer }}
+      </p>
+
+      <div class="otp-field">
+
+        <input type="number" maxlength="1" />
+        <input type="number" maxlength="1" />
+        <input type="number" maxlength="1" />
+        <input type="number" maxlength="1" />
+        <input type="number" maxlength="1" />
+        <input type="number" maxlength="1" />
+
+      </div>
+
+      <div class="btn">
+
+        <button
+          (click)="onLogin()"
+          class="login-btn">
+          Verify
+        </button>
+
+        <button
+          class="resend-otp-button"
+          [disabled]="remainingSeconds() > 0"
+          (click)="resendOtp()">
+
+          @if (remainingSeconds() > 0) {
+            Resend OTP ({{ timer }})
+          } @else {
+            Resend OTP
+          }
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

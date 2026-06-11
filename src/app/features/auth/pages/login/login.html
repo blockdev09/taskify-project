@@ -1,0 +1,26 @@
+<div class="login-container">
+  <app-landing-header></app-landing-header>
+  <main class="main">
+    <section class="content">
+      <h1 class="heading"><span class="first-letter">F</span>ocused Outcomes.</h1>
+      <h1 class="heading"><span class="first-letter">S</span>tay aligned.</h1>
+      <h1 class="heading"><span class="first-letter">K</span>eep Moving.</h1>
+      <p class="description">
+        AI Powered Project Management tool that removes the work around work.
+      </p>
+    </section>
+    <section class="login-section">
+      <div class="login-card">
+        <h2>Welcome Back!</h2>
+        <p class="info">Enter your email to continue...</p>
+        <form>
+          <label
+            >Email :
+            <input [formField]="loginForm.email" type="email" placeholder="you@coditas.com" />
+          </label>
+          <button type="submit" (click)="getOtp()">Get OTP</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>

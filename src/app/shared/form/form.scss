@@ -1,0 +1,23 @@
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.error-list {
+  margin: 0.25rem 0 1rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    color: red;
+    font-size: 0.85rem;
+  }
+}

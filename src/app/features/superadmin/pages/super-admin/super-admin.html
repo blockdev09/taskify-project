@@ -1,0 +1,48 @@
+<div class="super-admin-container">
+  <header class="header">
+    <div class="app-name">TASKIFY</div>
+    <nav class="navbar">
+      <a href="#">Profile</a>
+      <button class="logout-btn">Logout</button>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="functionalities">
+      <div class="operations">
+        <input type="search" placeholder="Seach here..." />
+
+        <select name="Select-Subscription" id="select-subscription">
+          <option value="All Features">All Features</option>
+          <option value="Half Features">Half Features</option>
+          <option value="Basic Features">Basic Features</option>
+        </select>
+        <select name="sort-names" id="sort-names">
+          <option value="ascending">A-Z</option>
+          <option value="descending">Z-A</option>
+        </select>
+      </div>
+
+      <div class="add-company-btn">
+        <button (click)="openAddCompanyModal()">Add Company</button>
+      </div>
+    </div>
+    <div class="super-admin-table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Logo</th>
+            <th>Subscriptions</th>
+            <th>Admin Name</th>
+            <th>Admin Email</th>
+            <th>Allowed Domains</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>

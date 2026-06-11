@@ -1,0 +1,92 @@
+<form (submit)="submit($event)">
+
+  <h2>{{ title() }}</h2>
+
+  @for(field of fields(); track field.key){
+
+    <div class="form-group">
+
+      <label>{{ field.label }}</label>
+
+      @switch(field.type){
+
+        @case('text'){
+          <input
+            type="text"
+            [placeholder]="field.placeholder ?? ''"
+            [formField]="getField(field.key)"
+          />
+        }
+
+        @case('email'){
+          <input
+            type="email"
+            [placeholder]="field.placeholder ?? ''"
+            [formField]="getField(field.key)"
+          />
+        }
+
+        @case('password'){
+          <input
+            type="password"
+            [placeholder]="field.placeholder ?? ''"
+            [formField]="getField(field.key)"
+          />
+        }
+
+        @case('date'){
+          <input
+            type="date"
+            [formField]="getField(field.key)"
+          />
+        }
+
+        @case('file'){
+          <input
+            type="file"
+          />
+        }
+
+        @case('select'){
+          <select [formField]="getField(field.key)">
+
+            <option value="">
+              Select
+            </option>
+
+            @for(option of field.options ?? []; track option.value){
+
+              <option [value]="option.value">
+                {{ option.label }}
+              </option>
+
+            }
+
+          </select>
+        }
+
+      }
+
+      @if(getField(field.key)().touched()){
+
+        <div class="errors">
+
+          @for(error of getField(field.key)().errors(); track error.message){
+
+            <p>{{ error.message }}</p>
+
+          }
+
+        </div>
+
+      }
+
+    </div>
+
+  }
+
+  <button type="submit">
+    Submit
+  </button>
+
+</form>
