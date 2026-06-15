@@ -1,0 +1,35 @@
+<div class="workflow-modal">
+
+  <h2>
+    Add Workflow
+  </h2>
+
+  <form
+    (submit)="createWorkflow($event)"
+  >
+
+    <label>
+
+      Workflow Name
+
+      <input
+        type="text"
+        [formField]="workflowForm.workflowName"
+      />
+
+    </label>
+
+    <button type="submit">
+      Add
+    </button>
+
+    <button
+      type="button"
+      (click)="closeDialog()"
+    >
+      Cancel
+    </button>
+
+  </form>
+
+</div>

@@ -1,0 +1,33 @@
+{
+  "projects": [
+    {
+      "projectName": "project 1",
+      "description": "ipsbdmndip;mzeoSP\"bdzd\n\n",
+      "id": "QmMoUUGvhzA"
+    }
+  ],
+  "workflows": [
+    {
+      "workflowName": "todo",
+      "projectId": null,
+      "id": "RCWMrqPxYbQ"
+    },
+    {
+      "workflowName": "Todo",
+      "projectId": null,
+      "id": "BUAzOedyZac"
+    },
+    {
+      "workflowName": "todo",
+      "projectId": null,
+      "id": "Q1Uupha2mlQ"
+    },
+    {
+      "workflowName": "tdod",
+      "projectId": "QmMoUUGvhzA",
+      "id": "r1BW3tntK8g"
+    }
+  ],
+  "tasks": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,63 @@
+.projects-page {
+  padding: 2rem;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.create-project-btn {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.project-card {
+  width: 320px;
+  height: 220px;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-description {
+  height: 70%;
+
+  padding: 1rem;
+
+  border-bottom: 1px solid #dcdcdc;
+
+  overflow: hidden;
+}
+
+.project-name {
+  height: 30%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 1rem;
+
+  font-size: 1.25rem;
+
+  font-weight: 600;
+}

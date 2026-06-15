@@ -1,0 +1,39 @@
+<div class="board">
+
+  <div class="workflows">
+
+    @for(
+      workflow of workflows();
+      track workflow.id
+    ) {
+
+      <div class="workflow-column">
+
+        <h3>
+
+          {{ workflow.workflowName }}
+
+        </h3>
+
+        <button (click)="openAddTaskModal(workflow.id)">
+
+          Add Task
+
+        </button>
+
+      </div>
+
+    }
+
+    <div
+      class="add-workflow"
+      (click)="openWorkflowModal()"
+    >
+
+      Add Workflow +
+
+    </div>
+
+  </div>
+
+</div>

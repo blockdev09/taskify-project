@@ -1,0 +1,43 @@
+<div class="create-project-modal">
+
+  <h2>
+    Create Project
+  </h2>
+
+  <form
+    (submit)="createProject($event)">
+
+    <label>
+
+      Project Name
+
+      <input
+        type="text"
+        [formField]="
+          projectForm.projectName
+        "
+      />
+
+    </label>
+
+    <label>
+
+      Description
+
+      <textarea
+        [formField]="
+          projectForm.description
+        ">
+      </textarea>
+
+    </label>
+
+    <button type="submit">
+
+      Create
+
+    </button>
+
+  </form>
+
+</div>

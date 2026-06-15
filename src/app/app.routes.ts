@@ -19,4 +19,11 @@ export const routes: Routes = [
         (route) => route.superadminRoutes,
       ),
   },
+  {
+    path: 'company-admin',
+    loadChildren: () =>
+      import('../app/features/companyadmin/pages/projects/companyadmin.routes').then(
+        (route) => route.companyAdminRoutes,
+      ),
+  },
 ];

@@ -1,0 +1,40 @@
+<div class="projects-page">
+
+  <div class="top-bar">
+
+    <h1>Your Workspace</h1>
+
+    <button
+      class="create-project-btn"
+      (click)="openCreateProjectModal()">
+
+      Create New Project
+
+    </button>
+
+  </div>
+
+  <div class="projects-container">
+
+    @for(project of projects(); track project.id){
+
+  <div
+    class="project-card"
+    (click)="openProject(project.id)"
+  >
+
+    <h3>
+      {{ project.projectName }}
+    </h3>
+
+    <p>
+      {{ project.description }}
+    </p>
+
+  </div>
+
+}
+
+  </div>
+
+</div>
